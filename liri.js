@@ -11,11 +11,11 @@ var spotify = new Spotify(keys.spotify);
 
 
 //-------FUNCTIONS--------->
-function runFunctions(userData1, userData2){
-runSpotify(userData2);
-getMovie(userData2); 
-getBands(userData2); 
-doWhatItSays(userData1); 
+function runFunctions(userData1, userData2) {
+    runSpotify(userData2);
+    getMovie(userData2);
+    getBands(userData2);
+    doWhatItSays(userData1);
 }
 
 runFunctions(process.argv[2], process.argv[3]);
@@ -23,16 +23,16 @@ runFunctions(process.argv[2], process.argv[3]);
 
 function runSpotify(song) {
 
-    
+
     if (process.argv[2] === 'spotify-this-song') {
-       
+
         if (song === undefined) {
             song = "The Sign";
         }
         spotify.search(
             {
                 type: "track",
-                query: song ,
+                query: song,
                 limit: 1
             },
             function (err, data) {
@@ -142,7 +142,7 @@ function doWhatItSays() {
                 process.argv[2] = dataArr[0];
                 process.argv[3] = dataArr[1];
                 runSpotify(process.argv[3]);
-            
+
             } else if (dataArr.length === 1) {
                 process.argv[2] = dataArr[0];
                 runSpotify(dataArr[1]);
