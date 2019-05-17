@@ -45,7 +45,7 @@ function runSpotify(song) {
 
 
                 for (var i = 0; i < songData.length; i++) {
-                    console.log("Artist: " + songData[i].artists.name);
+                    console.log("Artist: " + songData[i].artists[i].name);
                     console.log("Song Title: " + songData[i].name);
                     console.log("Preview This Song: " + songData[i].preview_url);
                     console.log("Album: " + songData[i].album.name);
