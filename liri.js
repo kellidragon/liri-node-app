@@ -19,7 +19,7 @@ function runFunctions(userData1, userData2) {
 }
 
 runFunctions(process.argv[2], process.argv[3]);
-//------------------------------------------------SPOTIFY /doesnt recogniize name---------------------------------------------->
+//------------------------------------------------SPOTIFY---------------------------------------------->
 
 function runSpotify(song) {
 
