@@ -27,7 +27,7 @@ function runSpotify(song) {
     if (process.argv[2] === 'spotify-this-song') {
 
         if (song === undefined) {
-            song = "The Sign";
+            song = "The Sign Ace of Base";
         }
         spotify.search(
             {
@@ -142,10 +142,12 @@ function doWhatItSays() {
                 process.argv[2] = dataArr[0];
                 process.argv[3] = dataArr[1];
                 runSpotify(process.argv[3]);
+                getMovie(process.argv[3]);
 
             } else if (dataArr.length === 1) {
-                process.argv[2] = dataArr[0];
-                runSpotify(dataArr[1]);
+                process.argv[3] = dataArr[0];
+                runSpotify(process.argv[3]);
+                getMovie(process.argv[3]);
             }
 
 
